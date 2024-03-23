@@ -32,6 +32,7 @@ data = function_signature + parameters
 
 # Make the RPC call
 result = web3.eth.call({
+    "from": os.getenv("SIGNER_ADDR"),
     "to": contract_address,
     "data": data,
 })

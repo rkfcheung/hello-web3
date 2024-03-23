@@ -61,7 +61,7 @@ contract = web3.eth.contract(address=contract_address, abi=contract_abi)
 tx = {
     'chainId': 80001,
     'from': from_account,
-    'value': 420000000000,  # Amount in wei
+    'value': int(os.getenv("FUNC_VALUE")),  # Amount in wei
     'gas': 53000,  # Gas limit
     'gasPrice': web3.to_wei('3', 'gwei'),  # Gas price in wei
     'nonce': nonce,  # Nonce of the sender address
