@@ -4,7 +4,7 @@ from web3 import Web3
 from web3.middleware import geth_poa_middleware
 
 # Connect to the Polygon Mumbai Testnet using Infura
-infura_url = "https://polygon-mumbai.infura.io/v3/" + os.getenv("INFURA_PROJECT_ID")
+infura_url = "https://polygon-mumbai.infura.io/v3/" + os.getenv("INFURA_API_KEY")
 
 # Connect to the Polygon network
 web3 = Web3(Web3.HTTPProvider(infura_url))
@@ -35,4 +35,4 @@ result = web3.eth.call({
     "to": contract_address,
     "data": data,
 })
-print(f"Contract content: {result}")
+print(f"Contract content: {result.decode('latin-1')}")
