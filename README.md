@@ -7,7 +7,7 @@ Hello Web3! I know that I join the party late. :-)
 1. Understand basics on smart contract
 2. [Setup accounts on Testnet](connect-alchemy.py)
 3. [View a contract on Web3](view-contract.py)
-4. Make a transaction on Web3
+4. [Send a transaction on Web3](send-transaction.py)
 
 ## Reference
 
